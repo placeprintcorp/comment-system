@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/getComments', 'App\Http\Controllers\CommentsController@getComments');
+Route::post('/storeComment', 'App\Http\Controllers\CommentsController@storeComment');
+Route::post('/storeReplyComment', 'App\Http\Controllers\CommentsController@storeReplyComment');
